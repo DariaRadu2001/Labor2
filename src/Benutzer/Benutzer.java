@@ -4,6 +4,9 @@ import Sport.Sport;
 
 import java.util.List;
 
+/**
+ *
+ */
 public class Benutzer {
 
     private String vorName;
