@@ -6,57 +6,57 @@ import java.util.List;
 
 public class Benutzer {
 
-    private String vorName;
-    private String nachName;
-    private List<Sport> sport_liste;
+    private String vorname;
+    private String nachname;
+    private List<Sport> sportListe;
 
-    public Benutzer(String vorName, String nachName, List<Sport> sport_liste) {
-        this.vorName = vorName;
-        this.nachName = nachName;
-        this.sport_liste = sport_liste;
+    public Benutzer(String vorName, String nachName, List<Sport> sportListe) {
+        this.vorname = vorName;
+        this.nachname = nachName;
+        this.sportListe = sportListe;
     }
 
     public String getVorName() {
-        return vorName;
+        return vorname;
     }
 
     public void setVorName(String vorName) {
-        this.vorName = vorName;
+        this.vorname = vorName;
     }
 
     public String getNachName() {
-        return nachName;
+        return nachname;
     }
 
     public void setNachName(String nachName) {
-        this.nachName = nachName;
+        this.nachname = nachName;
     }
 
     public List<Sport> getSport_liste() {
-        return sport_liste;
+        return sportListe;
     }
 
-    public void setSport_liste(List<Sport> sport_liste) {
-        this.sport_liste = sport_liste;
+    public void setsportListe(List<Sport> sportListe) {
+        this.sportListe = sportListe;
     }
 
     /**
-     * man berechnet die totale Zeitspanne, die eine Person braucht, um allen Sporten in seine Liste zu treiben
+     * man berechnet die totale Zeitspanne, die eine Person braucht, um allen Sports in seine Liste zu treiben
      * Exception, wenn die Person keinen Sport treibt
-     * @return totale_zeit
+     * @return totaleZeit
      */
     public double kalkuliereZeit()
     {
-        if(sport_liste.size() <= 0)
+        if(sportListe.size() <= 0)
             throw new IndexOutOfBoundsException("Es gibt keinen Sport in der Liste");
 
-        double total_zeit = 0;
-        for(Sport s : sport_liste)
+        double totalZeit = 0;
+        for(Sport s : sportListe)
         {
-            total_zeit += s.kalkuliereZeit();
+            totalZeit += s.kalkuliereZeit();
         }
 
-        return total_zeit;
+        return totalZeit;
     }
 
     /**
@@ -70,21 +70,21 @@ public class Benutzer {
     }
 
     /**
-     * Ich berechne das Durchschnittszeit einer Person
-     * @return das Durchschnittszeit der Zeitspanne
+     * Ich berechne die Durchschnittszeit einer Person
+     * @return die Durchschnittszeit der Zeitspanne
      */
     public double kalkuliereDurchschnittszeit()
     {
-        if(this.sport_liste.size() <= 0)
+        if(this.sportListe.size() <= 0)
             throw new IndexOutOfBoundsException("Es gibt keinen Sport in der Liste");
 
-        double total_zeit = 0;
-        for(Sport s : this.sport_liste)
+        double totalZeit = 0;
+        for(Sport s : this.sportListe)
         {
-            total_zeit += s.kalkuliereZeit();
+            totalZeit += s.kalkuliereZeit();
         }
 
-        return total_zeit/this.sport_liste.size();
+        return totalZeit/this.sportListe.size();
     }
 
 }

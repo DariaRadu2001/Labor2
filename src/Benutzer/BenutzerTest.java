@@ -24,17 +24,17 @@ class BenutzerTest {
         Sport hindernislauf = new Hindernislauf();
         Sport hochsprung = new Hochsprung();
 
-        List<Sport> list_ana = new ArrayList<Sport>();
-        list_ana.add(fussball);
-        list_ana.add(hochsprung);
-        list_ana.add(fussball);
-        ana = new Benutzer("Ana","Pop",list_ana);
+        List<Sport> listAna = new ArrayList<Sport>();
+        listAna.add(fussball);
+        listAna.add(hochsprung);
+        listAna.add(fussball);
+        ana = new Benutzer("Ana","Pop",listAna);
 
-        List<Sport> list_mihai = new ArrayList<Sport>();
-        list_mihai.add(fussball);
-        list_mihai.add(basketball);
-        list_mihai.add(hochsprung);
-        mihai = new Benutzer("Mihai","Man",list_mihai);
+        List<Sport> listMihai = new ArrayList<Sport>();
+        listMihai.add(fussball);
+        listMihai.add(basketball);
+        listMihai.add(hochsprung);
+        mihai = new Benutzer("Mihai","Man",listMihai);
 
         iana = new Benutzer("Iana", "Costel", new ArrayList<Sport>(){});
 
@@ -76,6 +76,7 @@ class BenutzerTest {
 
 
     }
+
 
     @org.junit.jupiter.api.Test
     void testKalkuliereZeit() {

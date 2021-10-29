@@ -19,14 +19,14 @@ public class Main {
         Hochsprung hochsprung = new Hochsprung();
         Sport sport = new Hochsprung();
 
-        List<Sport> list_daria = new ArrayList<Sport>();
-        list_daria.add(fussball);
-        list_daria.add(hochsprung);
-        list_daria.add(basketball);
-        list_daria.add(hindernislauf);
-        list_daria.add(fussball);
-        list_daria.add(sport);
-        Benutzer daria = new Benutzer("Daria", "Radu", list_daria);
+        List<Sport> listDaria = new ArrayList<Sport>();
+        listDaria.add(fussball);
+        listDaria.add(hochsprung);
+        listDaria.add(basketball);
+        listDaria.add(hindernislauf);
+        listDaria.add(fussball);
+        listDaria.add(sport);
+        Benutzer daria = new Benutzer("Daria", "Radu", listDaria);
 
         System.out.println("Darias Durchschnitt = " + daria.kalkuliereDurchschnittszeit());
         System.out.println("Darias total Zeit = " + daria.kalkuliereZeit());
